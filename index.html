@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LockedIn — Stay Focused. Stay Prepared.</title>
+  <meta name="description" content="LockedIn is a student operating system that combines study discipline, academic resources, networking, and graduation savings into one ecosystem." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- shared SVG gradient defs -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="sg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#38E8FF"/>
+        <stop offset="0.55" stop-color="#5B8CFF"/>
+        <stop offset="1" stop-color="#A86BFF"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <div class="progress" id="progress"></div>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="shell">
+      <div class="nav-inner glass">
+        <a href="#home" class="brand"><span class="mark" aria-hidden="true"></span> LockedIn</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how">How It Works</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#voices">Testimonials</a></li>
+          <li><a href="#waitlist">Waitlist</a></li>
+        </ul>
+        <a href="#waitlist" class="btn btn-primary nav-cta">Join Waitlist</a>
+        <button class="nav-toggle glass" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero" id="home">
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow reveal">The student operating system</span>
+          <h1 class="reveal" data-delay="1">Stay Locked In<br>to Your <span class="grad-text">Future</span></h1>
+          <p class="lead reveal" data-delay="2">A futuristic student ecosystem that transforms how you study, connect, and prepare for life after graduation.</p>
+          <div class="hero-actions reveal" data-delay="3">
+            <a href="#waitlist" class="btn btn-primary">Join Waitlist →</a>
+            <a href="#features" class="btn btn-ghost">Explore Features</a>
+          </div>
+          <div class="hero-stats reveal" data-delay="4">
+            <div class="stat"><strong>4-in-1</strong><span>Student OS</span></div>
+            <div class="stat"><strong>30 min</strong><span>Locked focus</span></div>
+            <div class="stat"><strong>Day 1</strong><span>Savings start</span></div>
+          </div>
+        </div>
+
+        <div class="hero-visual" id="heroVisual">
+          <div class="lock-rings" data-parallax="0.04">
+            <div class="ring r1"><span class="node"></span></div>
+            <div class="ring r2"><span class="node"></span></div>
+            <div class="ring r3"><span class="node"></span></div>
+          </div>
+
+          <div class="float-chip glass c1" data-parallax="0.08"><b>●</b> Focus locked</div>
+          <div class="float-chip glass c2" data-parallax="0.06">+₦ saved <b>↑</b></div>
+
+          <div class="phone" data-parallax="0.02">
+            <div class="phone-screen">
+              <div class="scr-eyebrow">// STUDYLOCK ACTIVE</div>
+              <div class="timer" id="heroTimer">17:42<span> left</span></div>
+              <div class="scr-sub">Alarm unlocks at 30:00 of focus</div>
+              <svg class="ring-meter" viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="track" cx="60" cy="60" r="50"></circle>
+                <circle class="prog" id="heroProg" cx="60" cy="60" r="50"
+                        stroke-dasharray="314" stroke-dashoffset="125"></circle>
+              </svg>
+              <div class="lock-pill"><span class="dot"></span> Phone stays locked until done</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features">
+    <div class="shell">
+      <div class="section-head reveal">
+        <span class="eyebrow">Inside the system</span>
+        <h2>Four tools. <span class="grad-text">One ecosystem.</span></h2>
+        <p>Each part of LockedIn does one job exceptionally well — and they share the same account, so discipline, resources, people, and money stay in sync.</p>
+      </div>
+
+      <!-- Feature 1 -->
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="eyebrow">StudyLock</span>
+          <h3>The alarm that won't quit until you do the work</h3>
+          <p>Schedule a session and StudyLock takes over. The alarm only switches off after a real, active reading block is complete — no snooze, no shortcut. Thirty honest minutes, every time.</p>
+          <div class="tags"><span>Never-ending alarm</span><span>Active timer</span><span>Streaks</span></div>
+        </div>
+        <div class="feature-art glass reveal" data-delay="1" data-tilt>
+          <svg viewBox="0 0 420 300" role="img" aria-label="StudyLock alarm and focus timer interface">
+            <rect x="120" y="30" width="180" height="240" rx="26" fill="#0c1120" stroke="rgba(255,255,255,.1)"/>
+            <circle cx="210" cy="138" r="62" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="10"/>
+            <circle cx="210" cy="138" r="62" fill="none" stroke="url(#sg)" stroke-width="10" stroke-linecap="round"
+                    stroke-dasharray="390" stroke-dashoffset="150" transform="rotate(-90 210 138)"/>
+            <text x="210" y="132" text-anchor="middle" fill="#EAF0FF" font-family="Space Grotesk" font-size="30" font-weight="600">17:42</text>
+            <text x="210" y="156" text-anchor="middle" fill="#6B748C" font-family="Space Mono" font-size="10">FOCUS LOCKED</text>
+            <rect x="148" y="218" width="124" height="30" rx="9" fill="rgba(56,232,255,.1)" stroke="rgba(56,232,255,.3)"/>
+            <text x="210" y="238" text-anchor="middle" fill="#38E8FF" font-family="Space Mono" font-size="10">UNLOCKS AT 30:00</text>
+            <circle cx="78" cy="80" r="22" fill="rgba(168,107,255,.15)" stroke="rgba(168,107,255,.4)"/>
+            <path d="M78 70v12l7 4" stroke="#A86BFF" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="346" cy="210" r="16" fill="rgba(56,232,255,.15)" stroke="rgba(56,232,255,.4)"/>
+            <path d="M340 210l5 5 9-10" stroke="#38E8FF" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="eyebrow">Graduate Wallet</span>
+          <h3>Save through school. Walk out ready.</h3>
+          <p>Put a little aside while you study and watch it grow toward a graduation goal. Funds stay set aside until you finish — so the cap-and-gown moment comes with a cushion, not a cliff.</p>
+          <div class="tags"><span>Goal tracking</span><span>Auto-save</span><span>Grad countdown</span></div>
+        </div>
+        <div class="feature-art glass reveal" data-delay="1" data-tilt>
+          <svg viewBox="0 0 420 300" role="img" aria-label="Graduate savings wallet with growth graph">
+            <rect x="40" y="60" width="340" height="180" rx="22" fill="#0c1120" stroke="rgba(255,255,255,.1)"/>
+            <text x="64" y="98" fill="#6B748C" font-family="Space Mono" font-size="11">GRADUATE WALLET</text>
+            <text x="64" y="134" fill="#EAF0FF" font-family="Space Grotesk" font-size="30" font-weight="600">₦ 184,500</text>
+            <text x="64" y="156" fill="#38E8FF" font-family="Space Mono" font-size="11">+12.4% this term</text>
+            <polyline points="64,210 110,196 156,200 202,176 248,182 294,150 340,128"
+                      fill="none" stroke="url(#sg)" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="340" cy="128" r="5" fill="#A86BFF"/>
+            <rect x="248" y="84" width="116" height="34" rx="10" fill="rgba(168,107,255,.12)" stroke="rgba(168,107,255,.3)"/>
+            <text x="306" y="105" text-anchor="middle" fill="#A86BFF" font-family="Space Mono" font-size="10">🎓 412 DAYS</text>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="eyebrow">Resource Library</span>
+          <h3>Every course, where you'd expect to find it</h3>
+          <p>Structured academic materials organised by university, department, and course code. Search once, land on the exact notes, past questions, and reading you need — no group-chat archaeology.</p>
+          <div class="tags"><span>By course code</span><span>Past questions</span><span>Smart search</span></div>
+        </div>
+        <div class="feature-art glass reveal" data-delay="1" data-tilt>
+          <svg viewBox="0 0 420 300" role="img" aria-label="Academic resource library with course cards">
+            <rect x="40" y="44" width="340" height="40" rx="12" fill="#0c1120" stroke="rgba(255,255,255,.1)"/>
+            <circle cx="66" cy="64" r="7" fill="none" stroke="#38E8FF" stroke-width="2"/>
+            <line x1="71" y1="69" x2="78" y2="76" stroke="#38E8FF" stroke-width="2" stroke-linecap="round"/>
+            <text x="92" y="69" fill="#6B748C" font-family="Space Mono" font-size="11">search course, code, dept…</text>
+            <g font-family="Space Grotesk" font-size="13" fill="#EAF0FF">
+              <rect x="40" y="104" width="160" height="74" rx="14" fill="rgba(56,232,255,.07)" stroke="rgba(56,232,255,.25)"/>
+              <text x="58" y="134">ANA 204</text><text x="58" y="156" fill="#6B748C" font-family="Space Mono" font-size="10">Gross Anatomy</text>
+              <rect x="220" y="104" width="160" height="74" rx="14" fill="rgba(168,107,255,.07)" stroke="rgba(168,107,255,.25)"/>
+              <text x="238" y="134">GST 101</text><text x="238" y="156" fill="#6B748C" font-family="Space Mono" font-size="10">Use of English</text>
+              <rect x="40" y="190" width="160" height="74" rx="14" fill="rgba(91,140,255,.07)" stroke="rgba(91,140,255,.25)"/>
+              <text x="58" y="220">SENG 312</text><text x="58" y="242" fill="#6B748C" font-family="Space Mono" font-size="10">Software Design</text>
+              <rect x="220" y="190" width="160" height="74" rx="14" fill="rgba(56,232,255,.07)" stroke="rgba(56,232,255,.25)"/>
+              <text x="238" y="220">PHA 201</text><text x="238" y="242" fill="#6B748C" font-family="Space Mono" font-size="10">Pharmacology</text>
+            </g>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="feature">
+        <div class="feature-text reveal">
+          <span class="eyebrow">Student Connect</span>
+          <h3>Find the people in your exact corner of campus</h3>
+          <p>Match with students in your university, department, or course. Form study groups, swap notes, and build the network that carries past graduation — all from inside the same app.</p>
+          <div class="tags"><span>Same course</span><span>Study groups</span><span>Direct chat</span></div>
+        </div>
+        <div class="feature-art glass reveal" data-delay="1" data-tilt>
+          <svg viewBox="0 0 420 300" role="img" aria-label="Student network graph and chat interface">
+            <line x1="210" y1="150" x2="100" y2="80" stroke="rgba(120,160,255,.3)" stroke-width="1.5"/>
+            <line x1="210" y1="150" x2="330" y2="92" stroke="rgba(120,160,255,.3)" stroke-width="1.5"/>
+            <line x1="210" y1="150" x2="120" y2="220" stroke="rgba(120,160,255,.3)" stroke-width="1.5"/>
+            <line x1="210" y1="150" x2="320" y2="218" stroke="rgba(120,160,255,.3)" stroke-width="1.5"/>
+            <circle cx="100" cy="80" r="20" fill="rgba(56,232,255,.15)" stroke="#38E8FF"/>
+            <circle cx="330" cy="92" r="20" fill="rgba(168,107,255,.15)" stroke="#A86BFF"/>
+            <circle cx="120" cy="220" r="20" fill="rgba(91,140,255,.15)" stroke="#5B8CFF"/>
+            <circle cx="320" cy="218" r="20" fill="rgba(56,232,255,.15)" stroke="#38E8FF"/>
+            <circle cx="210" cy="150" r="30" fill="url(#sg)"/>
+            <text x="210" y="156" text-anchor="middle" fill="#05070d" font-family="Space Grotesk" font-weight="700" font-size="13">YOU</text>
+            <rect x="250" y="234" width="150" height="42" rx="12" fill="#0c1120" stroke="rgba(255,255,255,.1)"/>
+            <circle cx="272" cy="255" r="9" fill="rgba(56,232,255,.4)"/>
+            <rect x="288" y="248" width="96" height="6" rx="3" fill="rgba(255,255,255,.25)"/>
+            <rect x="288" y="260" width="64" height="6" rx="3" fill="rgba(255,255,255,.12)"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how">
+    <div class="shell">
+      <div class="section-head reveal">
+        <span class="eyebrow">From sign-up to graduation</span>
+        <h2>Five steps to <span class="grad-text">locked in</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="step reveal"><div class="dot">01</div><div><h4>Create your account</h4><p>Tell LockedIn your university, department, and courses. The whole system tailors itself around them.</p></div></div>
+        <div class="step reveal" data-delay="1"><div class="dot">02</div><div><h4>Open your resources</h4><p>Your course library is waiting — notes, past questions, and reading mapped to your exact codes.</p></div></div>
+        <div class="step reveal" data-delay="2"><div class="dot">03</div><div><h4>Schedule a StudyLock</h4><p>Pick a block. The alarm holds you to it until you've put in real focus time.</p></div></div>
+        <div class="step reveal" data-delay="3"><div class="dot">04</div><div><h4>Connect with your people</h4><p>Match with students in your course, form groups, and study together instead of alone.</p></div></div>
+        <div class="step reveal" data-delay="4"><div class="dot">05</div><div><h4>Save and graduate prepared</h4><p>Your Graduate Wallet grows the whole way through, so finishing school comes with a head start.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFITS ===== -->
+  <section id="benefits">
+    <div class="shell">
+      <div class="section-head reveal">
+        <span class="eyebrow">Why students stay</span>
+        <h2>What you actually <span class="grad-text">get out of it</span></h2>
+      </div>
+      <div class="benefit-grid">
+        <div class="benefit glass reveal"><div class="ic">◎</div><h4>Real study discipline</h4><p>Structure that holds even on the days motivation doesn't show up.</p></div>
+        <div class="benefit glass reveal" data-delay="1"><div class="ic">▲</div><h4>Better performance</h4><p>Consistent focus blocks compound into grades you can feel.</p></div>
+        <div class="benefit glass reveal" data-delay="2"><div class="ic">▣</div><h4>Organised resources</h4><p>One place for every course, instead of ten scattered chats.</p></div>
+        <div class="benefit glass reveal" data-delay="3"><div class="ic">⬡</div><h4>A real community</h4><p>People in your exact corner of campus, a tap away.</p></div>
+        <div class="benefit glass reveal" data-delay="4"><div class="ic">◈</div><h4>Financial readiness</h4><p>A graduation cushion built quietly, term by term.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="voices">
+    <div class="shell">
+      <div class="section-head reveal">
+        <span class="eyebrow">Early voices</span>
+        <h2>Students who got <span class="grad-text">locked in</span></h2>
+      </div>
+      <div class="quote-grid">
+        <div class="quote glass reveal">
+          <div class="mark">"</div>
+          <p>StudyLock is the first thing that actually got me to stop snoozing my reading. The alarm just won't let me cheat.</p>
+          <div class="who"><span class="av" style="background:linear-gradient(135deg,#38E8FF,#5B8CFF)">AO</span><div><b>Amara O.</b><span>Nursing · 200L</span></div></div>
+        </div>
+        <div class="quote glass reveal" data-delay="1">
+          <div class="mark">"</div>
+          <p>Having every course code and past question in one library saved my whole semester. No more hunting through group chats.</p>
+          <div class="who"><span class="av" style="background:linear-gradient(135deg,#A86BFF,#5B8CFF)">TE</span><div><b>Tunde E.</b><span>Engineering · 300L</span></div></div>
+        </div>
+        <div class="quote glass reveal" data-delay="2">
+          <div class="mark">"</div>
+          <p>The wallet quietly grew while I studied. Graduating with savings instead of starting from zero is a different kind of confidence.</p>
+          <div class="who"><span class="av" style="background:linear-gradient(135deg,#38E8FF,#A86BFF)">CN</span><div><b>Chidi N.</b><span>Computer Science · 400L</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WAITLIST ===== -->
+  <section id="waitlist" class="waitlist">
+    <div class="shell">
+      <div class="section-head reveal" style="margin-inline:auto;text-align:center">
+        <span class="eyebrow" style="justify-content:center">Be early</span>
+        <h2>Get your spot in <span class="grad-text">LockedIn</span></h2>
+        <p style="margin-inline:auto">Join the waitlist and we'll reach out the moment your university goes live.</p>
+      </div>
+
+      <div class="waitlist-card glass reveal">
+        <div id="formView">
+          <div class="form-row">
+            <div class="field"><label for="name">Full name</label><input id="name" type="text" placeholder="Ada Lovelace" autocomplete="name" /></div>
+            <div class="field"><label for="email">Email</label><input id="email" type="email" placeholder="you@school.edu" autocomplete="email" /></div>
+            <div class="field full"><label for="uni">University</label><input id="uni" type="text" placeholder="Miva Open University" /></div>
+            <div class="field full"><label for="dept">Department</label><input id="dept" type="text" placeholder="Software Engineering" /></div>
+          </div>
+          <button class="btn btn-primary" id="joinBtn">Join the Waitlist →</button>
+        </div>
+        <div class="form-success" id="successView">
+          <div class="check">✓</div>
+          <h3 style="font-family:var(--font-display);margin-bottom:8px">You're on the list</h3>
+          <p style="color:var(--ink-soft)">We'll email you the moment LockedIn reaches your campus. Stay focused.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="shell">
+      <div class="foot-grid">
+        <div class="foot-brand">
+          <a href="#home" class="brand"><span class="mark" aria-hidden="true"></span> LockedIn</a>
+          <p>The student operating system. Stay focused, stay prepared — from first lecture to graduation day.</p>
+        </div>
+        <div class="foot-col">
+          <h5>Product</h5>
+          <a href="#features">StudyLock</a><a href="#features">Graduate Wallet</a><a href="#features">Resource Library</a><a href="#features">Student Connect</a>
+        </div>
+        <div class="foot-col">
+          <h5>Company</h5>
+          <a href="#how">How it works</a><a href="#benefits">Benefits</a><a href="#voices">Testimonials</a><a href="#waitlist">Waitlist</a>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <a href="#">Privacy</a><a href="#">Terms</a><a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 LockedIn. All rights reserved.</span>
+        <div class="socials">
+          <a href="#" aria-label="X">𝕏</a>
+          <a href="#" aria-label="Instagram">◙</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
